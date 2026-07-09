@@ -54,14 +54,19 @@ http://127.0.0.1:5000
 ```
 
 ---
+## 📸 Screenshots
 
-## 📸 Preview
+### 🏠 Home
+![Home](screenshots/home.png)
 
-![Home Page](screenshots/home.png)
+### 📤 Upload Resume
+![Upload](screenshots/upload.png)
 
-![Upload Page](screenshots/upload.png)
+### 📊 Analysis Result
+![Result 1](screenshots/result1.png)
 
-![Result Page](screenshots/result.png)
+### ✅ ATS Score & Suggestions
+![Result 2](screenshots/result2.png)
 
 ## 📁 Project Structure
 
