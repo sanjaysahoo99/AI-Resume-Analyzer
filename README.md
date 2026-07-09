@@ -60,13 +60,13 @@ http://127.0.0.1:5000
 ![Home](screenshots/home.png)
 
 ### 📤 Upload Resume
-![Upload](screenshots/upload.png.png)
+![Upload](screenshots/upload.png)
 
 ### 📊 Analysis Result
-![Result 1](screenshots/Result1.png.png)
+![Result 1](screenshots/Result1.png)
 
 ### ✅ ATS Score & Suggestions
-![Result 2](screenshots/Result2.png.png)
+![Result 2](screenshots/Result2.png)
 
 ## 📁 Project Structure
 
