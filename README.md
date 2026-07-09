@@ -57,14 +57,11 @@ http://127.0.0.1:5000
 
 ## 📸 Preview
 
-> Add screenshots here
+![Home Page](screenshots/home.png)
 
-```
-screenshots/home.png
-screenshots/result.png
-```
+![Upload Page](screenshots/upload.png)
 
----
+![Result Page](screenshots/result.png)
 
 ## 📁 Project Structure
 
