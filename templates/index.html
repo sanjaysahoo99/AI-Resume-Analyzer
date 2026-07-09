@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Resume Analyzer</h1>
+
+<p class="subtitle">
+    Analyze your Resume with AI and compare it against the Job Description to calculate your ATS Compatibility Score.
+</p>
+
+<p class="developer">
+    🚀 Developed by <span>Captain Sanjay</span>
+</p>
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <label>📄 Upload Resume (PDF / DOCX)</label>
+
+        <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf,.docx"
+            required>
+
+        <p id="fileName">No file selected</p>
+
+        <label>💼 Paste Job Description</label>
+
+        <textarea
+            name="job_description"
+            rows="10"
+            placeholder="Paste the Job Description here..."
+            required></textarea>
+
+        <button type="submit">
+            Analyze Resume
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>📊 ATS Compatibility Score</h2>
+
+        <div class="score">
+            {{ result.score }}%
+        </div>
+
+        <hr>
+
+        <h2>✅ Matched Skills</h2>
+
+        {% if result.matched_skills %}
+
+        <ul>
+
+            {% for skill in result.matched_skills %}
+
+            <li>✅ {{ skill }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>No matched skills found.</p>
+
+        {% endif %}
+
+        <hr>
+
+        <h2>❌ Missing Skills</h2>
+
+        {% if result.missing_skills %}
+
+        <ul>
+
+            {% for skill in result.missing_skills %}
+
+            <li>❌ {{ skill }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>🎉 No Missing Skills Found!</p>
+
+        {% endif %}
+
+        <hr>
+
+        <h2>⭐ Resume Strengths</h2>
+
+        {% if result.strengths %}
+
+        <ul>
+
+            {% for strength in result.strengths %}
+
+            <li>⭐ {{ strength }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>No strengths detected.</p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
