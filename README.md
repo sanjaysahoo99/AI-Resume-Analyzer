@@ -63,10 +63,10 @@ http://127.0.0.1:5000
 ![Upload](screenshots/upload.png)
 
 ### 📊 Analysis Result
-![Result 1](screenshots/result1.png)
+![Result 1](screenshots/Result1.png)
 
 ### ✅ ATS Score & Suggestions
-![Result 2](screenshots/result2.png)
+![Result 2](screenshots/Result2.png)
 
 ## 📁 Project Structure
 
